@@ -1,9 +1,7 @@
 package com.cloud.configs.hazelcastconfiggenerator;
 
 import java.util.List;
-import configs.cloud.client.CloudConfigClient;
-import configs.cloud.client.entity.Config;
-import configs.cloud.client.enums.CacheProvider;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -17,6 +15,13 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import org.w3c.dom.Document;
+
+import configs.cloud.client.CloudConfigClient;
+import configs.cloud.client.entity.Config;
+import configs.cloud.client.enums.CacheProvider;
+
+
+
 
 public class HazleCast {
 	
