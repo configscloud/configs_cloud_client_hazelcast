@@ -57,7 +57,7 @@
         <!--Queue capacity. 0 means Integer.MAX_VALUE.-->
         <queue-capacity>$executor-service.queue-capacity</queue-capacity>
     </executor-service>
-    <queue name="$queue.name">
+    <queue name="$queue.name"> 
         <!--
             Maximum size of the queue. When a JVM's local queue size reaches the maximum,
             all put/offer operations will get blocked until the queue size
@@ -80,7 +80,7 @@
 
         <empty-queue-ttl>$queue.empty-queue-ttl</empty-queue-ttl>
     </queue>
-    <map name="$map1.name">
+    <map name="$map.name">
         <!--
            Data type that will be used for storing recordMap.
            Possible values:
@@ -88,32 +88,32 @@
            OBJECT : values will be stored in their object forms
            NATIVE : values will be stored in non-heap region of JVM
         -->
-        <in-memory-format>$map1.name.in-memory-format</in-memory-format>
+        <in-memory-format>$map.in-memory-format</in-memory-format>
 
         <!--
             Number of backups. If 1 is set as the backup-count for example,
             then all entries of the map will be copied to another JVM for
             fail-safety. 0 means no backup.
         -->
-        <backup-count>$map1.name.backup-count</backup-count>
+        <backup-count>$map.backup-count</backup-count>
         <!--
             Number of async backups. 0 means no backup.
         -->
-        <async-backup-count>$map1.name.async-backup-count</async-backup-count>
+        <async-backup-count>$map.async-backup-count</async-backup-count>
         <!--
                         Maximum number of seconds for each entry to stay in the map. Entries that are
                         older than <time-to-live-seconds> and not updated for <time-to-live-seconds>
                         will get automatically evicted from the map.
                         Any integer between 0 and Integer.MAX_VALUE. 0 means infinite. Default is 0.
                 -->
-        <time-to-live-seconds>$map1.name.time-to-live-seconds</time-to-live-seconds>
+        <time-to-live-seconds>$map.time-to-live-seconds</time-to-live-seconds>
         <!--
                         Maximum number of seconds for each entry to stay idle in the map. Entries that are
                         idle(not touched) for more than <max-idle-seconds> will get
                         automatically evicted from the map. Entry is touched if get, put or containsKey is called.
                         Any integer between 0 and Integer.MAX_VALUE. 0 means infinite. Default is 0.
                 -->
-        <max-idle-seconds>$map1.name.max-idle-seconds</max-idle-seconds>
+        <max-idle-seconds>$map.max-idle-seconds</max-idle-seconds>
         <!--
             Valid values are:
             NONE (no eviction),
@@ -121,27 +121,27 @@
             LFU (Least Frequently Used).
             NONE is the default.
         -->
-        <eviction-policy>$map1.name.eviction-policy</eviction-policy>
+        <eviction-policy>$map.eviction-policy</eviction-policy>
         <!--
             Maximum size of the map. When max size is reached,
             map is evicted based on the policy defined.
             Any integer between 0 and Integer.MAX_VALUE. 0 means
             Integer.MAX_VALUE. Default is 0.
         -->
-        <max-size policy="$map1.name.max-size.policy">$map1.name.max-size.size</max-size>
+        <max-size policy="$map.max-size.policy">$map.max-size.size</max-size>
         <!--
             When max. size is reached, specified percentage of
             the map will be evicted. Any integer between 0 and 100.
             If 25 is set for example, 25% of the entries will
             get evicted.
         -->
-        <eviction-percentage>$map1.name.eviction-percentage</eviction-percentage>
+        <eviction-percentage>$map.eviction-percentage</eviction-percentage>
         <!--
             Minimum time in milliseconds which should pass before checking
             if a partition of this map is evictable or not.
             Default value is 100 millis.
         -->
-        <min-eviction-check-millis>$map1.name.min-eviction-check-millis</min-eviction-check-millis>
+        <min-eviction-check-millis>$map.min-eviction-check-millis</min-eviction-check-millis>
         <!--
             While recovering from split-brain (network partitioning),
             map entries in the small cluster will merge into the bigger cluster
@@ -157,7 +157,7 @@
             com.hazelcast.map.merge.HigherHitsMapMergePolicy ; entry with the higher hits wins.
             com.hazelcast.map.merge.LatestUpdateMapMergePolicy ; entry with the latest update wins.
         -->
-        <merge-policy>$map1.name.merge-policy</merge-policy>
+        <merge-policy>$map.merge-policy</merge-policy>
 
     </map>
 
