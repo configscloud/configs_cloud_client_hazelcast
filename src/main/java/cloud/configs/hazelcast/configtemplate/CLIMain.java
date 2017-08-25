@@ -1,6 +1,6 @@
 package cloud.configs.hazelcast.configtemplate;
 
-public class Main {
+public class CLIMain {
 	
 	private static String api_endpoint;
 	private static String api_key;

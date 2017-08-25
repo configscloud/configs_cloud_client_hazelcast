@@ -53,11 +53,25 @@
 	<dependencies>
 		
 		<!-- https://mvnrepository.com/artifact/cloud.configs/ConfigsCloudClient -->
-			<dependency>
-			    <groupId>cloud.configs</groupId>
-			    <artifactId>ConfigsCloudClient</artifactId>
-			    <version>1.1</version>
-			</dependency>
+		<dependency>
+		    <groupId>cloud.configs</groupId>
+		    <artifactId>ConfigsCloudClient</artifactId>
+		    <version>1.1</version>
+		</dependency>
+			
+		<!-- https://mvnrepository.com/artifact/com.sun.xml.bind/jaxb-impl -->
+		<dependency>
+		    <groupId>com.sun.xml.bind</groupId>
+		    <artifactId>jaxb-impl</artifactId>
+		    <version>2.2.11</version>
+		</dependency>
+						
+        <dependency>
+            <groupId>com.sun.xml.bind</groupId>
+            <artifactId>jaxb-core</artifactId>
+            <version>2.2.11</version>
+        </dependency>
+			
 	</dependencies>
 
 	<build>

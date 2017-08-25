@@ -57,7 +57,6 @@ public class HazelCastConfigGenerator {
 	 * @throws Exception
 	 */
 	public void generateConfiguration() throws Exception {
-
 		CloudConfigClient c = new CloudConfigClient(api_key, api_endpoint, true, datasetId, envSname, CacheProvider.HAZELCAST);
 		List<Config> cd = c.getConfigs(datasetId, envSname);
 		try {
